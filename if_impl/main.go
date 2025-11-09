@@ -18,6 +18,11 @@ func (u *User) GetName() string {
 	return u.name
 }
 
+// 基本的には、ポインタレシーバで実装する。
+// func (u User) GetName() string {
+// 	return u.name
+// }
+
 func (u *User) SetName(name string) {
 	u.name = name
 }
