@@ -12,10 +12,17 @@ func say(s string) {
     }
 }
 
+func talk(word string) {
+	fmt.Println(word, "と発言しました。")
+	time.Sleep(200 * time.Millisecond)
+}
+
 func main() {
     // goroutineを2つ起動
     go say("hello")
+	go talk("何て？")
     go say("world")
+	go talk("こんにちは")
 
     // main関数がすぐ終わらないように待つ
     time.Sleep(2 * time.Second)
